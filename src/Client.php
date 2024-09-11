@@ -11,28 +11,16 @@ use DOMElement;
 class Client
 {
     /**
-     * Url Format.
-     */
-    public const URL_FORMAT = 'https://%s/feeds/google-shopping/%s';
-    
-    /**
      * @var string
      */
-    private $domain;
+    private $url;
     
     /**
-     * @var string
+     * @param string $url
      */
-    private $feedKey;
-    
-    /**
-     * @param string $domain
-     * @param string $feedKey
-     */
-    public function __construct(string $domain, string $feedKey)
+    public function __construct(string $url)
     {
-        $this->domain = $domain;
-        $this->feedKey = $feedKey;
+        $this->url = $url;
     }
     
     /**
@@ -40,7 +28,7 @@ class Client
      */
     public function getUrl(): string
     {
-        return sprintf(self::URL_FORMAT, $this->domain, $this->feedKey);
+        return $this->url;
     }
     
     /**

@@ -13,11 +13,10 @@ Setup
     use Onetoweb\GoogleProductFeed\Client;
     
     // params
-    $domain = 'www.example.nl';
-    $feedKey = '1bc29b36f623ba82aaf6724fd3b16718';
+    $url = 'https://www.example.nl/feeds/google-shopping/1bc29b36f623ba82aaf6724fd3b16718';
     
     // setup client
-    $client = new Client($domain, $feedKey);
+    $client = new Client($url);
 
 
 Get Products
