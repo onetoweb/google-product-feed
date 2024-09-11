@@ -1,0 +1,30 @@
+{
+    "name": "onetoweb/google-product-feed",
+    "description": "Google Product Feed Client",
+    "keywords": [
+        "rss",
+        "feed",
+        "php",
+        "google product feed"
+    ],
+    "type": "library",
+    "homepage": "https://github.com/onetoweb/google-product-feed",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan van 't Ende",
+            "email": "jvantende@onetoweb.nl"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "require-dev": {
+        "symfony/error-handler": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Onetoweb\\GoogleProductFeed\\": "src/"
+        }
+    }
+}
