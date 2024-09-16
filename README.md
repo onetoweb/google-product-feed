@@ -1,4 +1,4 @@
-# Google Product Feed Client
+# Google Product Feed Reader
 
 ## Installing
 
