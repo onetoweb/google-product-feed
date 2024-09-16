@@ -1,11 +1,11 @@
 {
     "name": "onetoweb/google-product-feed",
-    "description": "Google Product Feed Client",
+    "description": "Google Product Feed Reader",
     "keywords": [
         "rss",
         "feed",
         "php",
-        "google product feed"
+        "google product feed reader"
     ],
     "type": "library",
     "homepage": "https://github.com/onetoweb/google-product-feed",
@@ -17,7 +17,8 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=7.1.0",
+        "symfony/polyfill-php80": "^1.31"
     },
     "require-dev": {
         "symfony/error-handler": "^5.0"
