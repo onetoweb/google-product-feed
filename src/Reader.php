@@ -42,7 +42,6 @@ class Reader
         return $this->source;
     }
     
-    
     /**
      * @param string $price
      * @return float|NULL
@@ -60,7 +59,7 @@ class Reader
     
     /**
      * @param DOMElement $node
-     * @return string|float[]
+     * @return string|float|null[]
      */
     private function readAttr(DOMElement $node): array
     {
