@@ -17,6 +17,8 @@ class Reader
     private $source;
     
     /**
+     * Options with default values.
+     * 
      * @var array
      */
     private $options = [
@@ -26,12 +28,12 @@ class Reader
     
     /**
      * @param string $source
-     * @param array $options
+     * @param array $options = []
      */
-    public function __construct(string $source, array $options)
+    public function __construct(string $source, array $options = [])
     {
         $this->source = $source;
-        $this->options = $options;
+        $this->options = array_merge($this->options, $options);
     }
     
     /**
