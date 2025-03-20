@@ -4,7 +4,7 @@ namespace Onetoweb\GoogleProductFeed;
 
 use Onetoweb\GoogleProductFeed\Options;
 use DOMDocument;
-use DOMElement;
+use DOMNode;
 
 /**
  * Google Product Feed Reader.
@@ -28,6 +28,7 @@ class Reader
     
     /**
      * @param string $source
+     * 
      * @param array $options = []
      */
     public function __construct(string $source, array $options = [])
@@ -46,6 +47,7 @@ class Reader
     
     /**
      * @param string $price
+     * 
      * @return float|NULL
      */
     public static function getPrice(?string $price): ?float
@@ -60,16 +62,17 @@ class Reader
     }
     
     /**
-     * @param DOMElement $node
+     * @param DOMNode $node
+     * 
      * @return string|float|null[]
      */
-    private function readAttr(DOMElement $node): array
+    private function readAttr(DOMNode $node): array
     {
         $result = [];
         
         foreach ($node->childNodes as $childNode) {
             
-            if (count($childNode->childNodes) > 1) {
+            if ($childNode->childNodes instanceof DOMNode) {
                 $result[$childNode->localName] = $this->readAttr($childNode);
             } elseif ($this->options[Options::PRICE_AS_FLOAT] and str_ends_with($childNode->localName, 'price')) {
                 $result[$childNode->localName] = self::getPrice($childNode->nodeValue);

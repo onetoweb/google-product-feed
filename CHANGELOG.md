@@ -16,3 +16,8 @@
 ## [2.0.1] - 2024-10-01
 
  - Bugfix: merge options, use default value if option is not set
+
+## [2.0.2] - 2025-03-20
+
+ - Use DOMNode instead of DOMElement to iterate over children
+
